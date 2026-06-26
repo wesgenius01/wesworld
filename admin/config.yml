@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: wegenius01/wesworld
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "academy"
+    label: "Academy Modules"
+    folder: "content/academy"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["Subdomain Alignment", "Sacred Geometry", "Sexual Fire & Polarity", "Mums Field"]}
+      - {label: "Content", name: "content", widget: "markdown"}
