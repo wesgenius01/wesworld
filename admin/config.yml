@@ -15,7 +15,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "academy"
@@ -23,6 +23,6 @@ collections:
     folder: "content/academy"
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Category", name: "category", widget: "select", options: ["Subdomain Alignment", "Sacred Geometry", "Sexual Fire & Polarity", "Mums Field"]}
       - {label: "Content", name: "content", widget: "markdown"}
